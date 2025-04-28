@@ -2,45 +2,44 @@ Instrucciones para restaurar la base de datos
 
 Paso 1: Descargar el archivo de respaldo de la base de datos
 
-Dirígete al siguiente enlace para descargar el archivo de respaldo de la base de datos:
-Descargar base de datos SistemaAcademicoDB.bak
-En el Disco local C crear una nueva carpeta llamada Base de Datos y mover el archivo de SistemaAcademicoDB.bak a esta carpeta.
+1. Dirígete al siguiente enlace para descargar el archivo de respaldo de la base de datos:  
+   [Descargar base de datos SistemaAcademicoDB.bak](https://drive.google.com/file/d/1gGDrzV6jheawva-PiUgqFfDh_qmjAzRG/view?usp=sharing)
+2. En el Disco local C crear una nueva carpeta llamada Base de Datos y mover el archivo de SistemaAcademicoDB.bak a esta carpeta.
 
 Paso 2: Restaurar la base de datos en SQL Server
 
-Abre SQL Server Management Studio (SSMS) y conéctate a tu servidor de base de datos.
-Haz clic derecho en la opción Bases de datos en el panel izquierdo y selecciona Restaurar base de datos.
-En el cuadro de diálogo que aparece:
-Selecciona la opción Dispositivo.
-Haz clic en Agregar y selecciona la carpeta Base de Datos ahi aparecera el archivo .bak que descargaste.
-Asegúrate de que la base de datos a restaurar sea SistemaAcademicoDB.
-Haz clic en Aceptar para iniciar la restauración.
-Una vez completado el proceso, la base de datos SistemaAcademicoDB estará lista para ser utilizada.
+1. Abre **SQL Server Management Studio (SSMS)** y conéctate a tu servidor de base de datos.
+2. Haz clic derecho en la opción Bases de datos en el panel izquierdo y selecciona **Restaurar base de datos**.
+3. En el cuadro de diálogo que aparece:
+   - Selecciona la opción **Dispositivo**.
+   - Haz clic en **Agregar** y selecciona el archivo `.bak` que descargaste.
+   - Asegúrate de que la base de datos a restaurar sea `SistemaAcademicoDB`.
+   - Haz clic en **Aceptar** para iniciar la restauración.
+4. Una vez completado el proceso, la base de datos `SistemaAcademicoDB` estará lista para ser utilizada.
 
 Paso 3: Configurar el sistema
 
-Conexión a la base de datos:
-En tu proyecto, asegúrate de que el archivo de configuración de conexión a la base de datos (appsettings.json o web.config) apunte a la base de datos SistemaAcademicoDB en tu instancia de SQL Server.
-Ejemplo de cadena de conexión en appsettings.json:
-
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Database=SistemaAcademicoDB;User Id=tu_usuario;Password=tu_contraseña;"
-  }
-}
+1. Conexión a la base de datos:  
+   - En tu proyecto, asegúrate de que el archivo de configuración de conexión a la base de datos (`appsettings.json` o `web.config`) apunte a la base de datos `SistemaAcademicoDB` en tu instancia de SQL Server.
+   - Ejemplo de cadena de conexión en `appsettings.json`:
+   ```json
+   {
+     "ConnectionStrings": {
+       "DefaultConnection": "Server=localhost;Database=SistemaAcademicoDB;User Id=tu_usuario;Password=tu_contraseña;"
+     }
+   }
 
 Paso 4: Conectar con la base de datos
 
-En el explorador de servicios haz click en conectar con la base de datos.
-Aparecera una ventana escribe en la parte Nombre del Servidor damos click en Actualizar.
-Luego haz click en la flecha que aparece a la derecha del boton Actualizar ahi aparecera el nombre del servidor.
-En la parte de cifrar selecciona Optional(False).
-Despues en la parte establecer conexion con la base de datos haz click en la flecha y selecciona SistemaAcademicoDB luego Aceptar.
+1. En el explorador de servicios haz click en conectar con la base de datos.
+2. Aparecera una ventana escribe en la parte Nombre del Servidor damos click en Actualizar.
+3. Luego haz click en la flecha que aparece a la derecha del boton Actualizar ahi aparecera el nombre del servidor.
+4. En la parte de cifrar selecciona Optional(False).
+5. Despues en la parte establecer conexion con la base de datos haz click en la flecha y selecciona SistemaAcademicoDB luego Aceptar.
 
-Para poder ejecutar el sistema en la parte derecha dar click en SistemaAcademicoWeb.
-Se desplegaran varios archivos, buscamos el archivo Caratula.aspx y damos click.
-Estando en ese archivo procedemos a ejecitar el sistema.
-
+6. Para poder ejecutar el sistema en la parte derecha dar click en SistemaAcademicoWeb.
+7. Se desplegaran varios archivos, buscamos el archivo Caratula.aspx y damos click.
+8. Estando en ese archivo procedemos a ejecitar el sistema.
 
 INFORME DE GUÍA PRÁCTICA
 
