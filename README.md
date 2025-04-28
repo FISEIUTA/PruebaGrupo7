@@ -5,6 +5,7 @@ Paso 1: Descargar el archivo de respaldo de la base de datos
 Dirígete al siguiente enlace para descargar el archivo de respaldo de la base de datos:
 Descargar base de datos SistemaAcademicoDB.bak
 En el Disco local C crear una nueva carpeta llamada Base de Datos y mover el archivo de SistemaAcademicoDB.bak a esta carpeta.
+
 Paso 2: Restaurar la base de datos en SQL Server
 
 Abre SQL Server Management Studio (SSMS) y conéctate a tu servidor de base de datos.
@@ -15,11 +16,13 @@ Haz clic en Agregar y selecciona la carpeta Base de Datos ahi aparecera el archi
 Asegúrate de que la base de datos a restaurar sea SistemaAcademicoDB.
 Haz clic en Aceptar para iniciar la restauración.
 Una vez completado el proceso, la base de datos SistemaAcademicoDB estará lista para ser utilizada.
+
 Paso 3: Configurar el sistema
 
 Conexión a la base de datos:
 En tu proyecto, asegúrate de que el archivo de configuración de conexión a la base de datos (appsettings.json o web.config) apunte a la base de datos SistemaAcademicoDB en tu instancia de SQL Server.
 Ejemplo de cadena de conexión en appsettings.json:
+
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Database=SistemaAcademicoDB;User Id=tu_usuario;Password=tu_contraseña;"
